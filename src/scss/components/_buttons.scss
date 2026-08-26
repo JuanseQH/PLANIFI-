@@ -1,0 +1,104 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 16px;
+  background: $primary;
+  color: $white;
+  border-radius: $radius-button;
+  font-size: 14px;
+  font-weight: $font-semibold;
+
+  &:active {
+    filter: brightness(0.95);
+  }
+
+  &.full {
+    width: 100%;
+  }
+
+  &.btn-sm {
+    min-height: 36px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $primary-dark;
+  border: 1px solid $blue-200;
+}
+
+.btn-danger,
+.btn-danger-outline {
+  background: $danger;
+  color: $white;
+}
+
+.btn-danger-outline {
+  background: transparent;
+  color: $danger;
+  border: 1px solid $danger;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: inherit;
+  flex-shrink: 0;
+
+  &.light {
+    background: rgba(255, 255, 255, 0.16);
+    color: $white;
+  }
+}
+
+.fab {
+  position: fixed;
+  right: max(16px, calc(50% - 14rem + 16px));
+  bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+  color: $white;
+  box-shadow: 0 10px 24px rgba(29, 78, 216, 0.4);
+  z-index: 45;
+  display: grid;
+  place-items: center;
+}
+
+.fab-menu {
+  position: fixed;
+  right: max(16px, calc(50% - 14rem + 16px));
+  bottom: calc(152px + env(safe-area-inset-bottom, 0px));
+  display: grid;
+  gap: 8px;
+  z-index: 46;
+
+  button {
+    background: var(--white, #{$white});
+    color: var(--text, #{$text});
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-weight: $font-medium;
+    box-shadow: $shadow-menu;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+}
+
+.file-btn {
+  cursor: pointer;
+}

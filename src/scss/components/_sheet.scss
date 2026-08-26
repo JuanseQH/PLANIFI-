@@ -1,0 +1,131 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+
+  &[hidden] {
+    display: none !important;
+  }
+}
+
+.sheet-scrim {
+  position: absolute;
+  inset: 0;
+  background: $overlay;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.sheet-card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: min(88dvh, 720px);
+  background: var(--white, #{$white});
+  color: var(--text, #{$text});
+  border-radius: 24px 24px 0 0;
+  padding: 16px 16px calc(20px + env(safe-area-inset-bottom, 0px));
+  overflow: auto;
+  max-width: 28rem;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 18px;
+    font-weight: $font-semibold;
+  }
+
+  &.confirm-card {
+    left: 16px;
+    right: 16px;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    max-height: none;
+  }
+}
+
+.sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.sheet-body {
+  display: grid;
+  gap: 12px;
+
+  label {
+    display: grid;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted, #{$muted});
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-height: 48px;
+    background: var(--input-bg, #{$input-bg});
+    border: 1px solid transparent;
+    border-radius: $radius-input;
+    padding: 0 14px;
+    color: var(--text, #{$text});
+    font-size: 14px;
+  }
+}
+
+.confirm-host {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+
+  &[hidden] {
+    display: none !important;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: $overlay;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 32px), 26rem);
+  bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+  background: $text;
+  color: $white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: $font-medium;
+  z-index: 80;
+  display: none;
+
+  &.is-visible {
+    display: block;
+  }
+}
+
+[data-theme="oscuro"] .toast {
+  background: #e2e8f0;
+  color: #0f172a;
+}

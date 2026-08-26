@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.settings-row--1 {
+  top: 160px;
+}
+
+.settings-row--2 {
+  top: 260px;
+}
+
+.settings-row--3 {
+  top: 360px;
+}
+
+.settings-row--4 {
+  top: 460px;
+}
+
+.settings-row--5 {
+  top: 560px;
+}
+
+.settings-row-title {
+  @include abs($left: 20px, $top: 24px);
+  @include type(14px, $font-semibold, $text);
+}
+
+.settings-row-action {
+  @include abs($left: 20px, $top: 51px);
+  @include type(11px, $font-regular, $primary);
+}

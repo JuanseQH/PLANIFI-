@@ -1,0 +1,116 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.kpi--ingresos {
+  left: 24px;
+}
+
+.kpi--gastos {
+  left: 143px;
+}
+
+.kpi--ahorro {
+  left: 262px;
+}
+
+.kpi-label {
+  @include abs($top: 178px);
+  @include type(11px, $font-regular, $muted);
+
+  &--ingresos {
+    left: 34px;
+  }
+
+  &--gastos {
+    left: 153px;
+  }
+
+  &--ahorro {
+    left: 272px;
+  }
+}
+
+.kpi-value {
+  @include abs($top: 207px);
+  font-size: 17px;
+  font-weight: $font-semibold;
+  line-height: normal;
+
+  &--ingresos {
+    left: 34px;
+  }
+
+  &--gastos {
+    left: 153px;
+  }
+
+  &--ahorro {
+    left: 272px;
+  }
+
+  &--green {
+    color: $success;
+  }
+
+  &--red {
+    color: $danger;
+  }
+
+  &--blue {
+    color: $primary;
+  }
+}
+
+.section-title--dist {
+  top: 292px;
+}
+
+.bar {
+  @include abs($width: 38px);
+  background: $primary;
+  border-radius: 8px;
+
+  &--1 {
+    left: 48px;
+    top: 400px;
+    height: 90px;
+  }
+
+  &--2 {
+    left: 107px;
+    top: 345px;
+    height: 145px;
+  }
+
+  &--3 {
+    left: 166px;
+    top: 420px;
+    height: 70px;
+  }
+
+  &--4 {
+    left: 225px;
+    top: 370px;
+    height: 120px;
+  }
+
+  &--5 {
+    left: 284px;
+    top: 435px;
+    height: 55px;
+  }
+}
+
+.section-title--tendencia {
+  top: 550px;
+}
+
+.trend-label {
+  @include abs($left: 44px, $top: 604px);
+  @include type(12px, $font-regular, $muted);
+}
+
+.trend-value {
+  @include abs($left: 44px, $top: 634px);
+  @include type(24px, $font-semibold, $success);
+}

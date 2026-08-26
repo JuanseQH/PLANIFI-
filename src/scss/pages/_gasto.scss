@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.scrim {
+  @include abs($left: 0, $top: 154px, $width: $screen-w, $height: 690px);
+  background: $overlay;
+}
+
+.modal-title {
+  @include abs($left: 48px, $top: 274px);
+  @include type(20px, $font-semibold, $text);
+}

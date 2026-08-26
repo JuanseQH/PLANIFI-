@@ -1,0 +1,56 @@
+$bg: #eef4ff;
+$primary: #3b82f6;
+$primary-soft: #e5f0ff;
+$primary-dark: #1d4ed8;
+$blue-100: #dbeafe;
+$blue-200: #bfdbfe;
+$input-bg: #f7faff;
+$text: #0f172a;
+$muted: #64748b;
+$white: #ffffff;
+$success: #22c55e;
+$danger: #ef4444;
+$overlay: rgba(13, 18, 31, 0.22);
+$shell-bg: #0f172a;
+
+$screen-w: 390px;
+$screen-h: 844px;
+$radius-screen: 28px;
+$radius-card: 16px;
+$radius-modal: 24px;
+$radius-input: 12px;
+$radius-button: 14px;
+
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+
+$font-family: "Inter", sans-serif;
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+
+$shadow-phone: 0 24px 80px rgba(0, 0, 0, 0.35);
+$shadow-nav: 0 -4px 24px rgba(29, 78, 216, 0.35);
+$shadow-menu: 0 8px 24px rgba(15, 23, 42, 0.12);
+
+$bp-phone: 430px;
+
+:root {
+  --bg: #{$bg};
+  --primary: #{$primary};
+  --primary-soft: #{$primary-soft};
+  --blue-100: #{$blue-100};
+  --input-bg: #{$input-bg};
+  --text: #{$text};
+  --muted: #{$muted};
+  --white: #{$white};
+  --success: #{$success};
+  --danger: #{$danger};
+  --overlay: #{$overlay};
+  --screen-w: #{$screen-w};
+  --screen-h: #{$screen-h};
+  --radius-screen: #{$radius-screen};
+  --font: #{$font-family};
+}

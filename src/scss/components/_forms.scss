@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+form label input,
+form label select {
+  @include focus-ring;
+}
+
+.voice-status {
+  color: $primary-dark;
+}

@@ -1,0 +1,69 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(28rem, 100%);
+  bottom: 0;
+  z-index: 50;
+  padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+  box-shadow: $shadow-nav;
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 12px;
+    color: $blue-200;
+    background: transparent;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    @include focus-ring($white);
+
+    &:hover {
+      color: $white;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &.is-active {
+      color: $white;
+      background: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    overflow: clip;
+    display: block;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+  }
+
+  &__label {
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: $font-medium;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  .bottom-nav__tab {
+    padding: 8px 12px;
+  }
+}

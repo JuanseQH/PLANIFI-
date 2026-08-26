@@ -1,0 +1,48 @@
+@use "variables" as *;
+
+@mixin abs($left: null, $top: null, $width: null, $height: null, $right: null, $bottom: null) {
+  position: absolute;
+
+  @if $left != null {
+    left: $left;
+  }
+
+  @if $top != null {
+    top: $top;
+  }
+
+  @if $right != null {
+    right: $right;
+  }
+
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+
+  @if $width != null {
+    width: $width;
+  }
+
+  @if $height != null {
+    height: $height;
+  }
+}
+
+@mixin type($size, $weight: $font-regular, $color: $text) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: normal;
+}
+
+@mixin card($radius: $radius-card) {
+  background: $white;
+  border-radius: $radius;
+}
+
+@mixin focus-ring($color: $primary) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: 2px;
+  }
+}

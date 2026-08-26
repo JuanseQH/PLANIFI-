@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.balance-label {
+  @include abs($left: 44px, $top: 128px);
+  @include type(13px, $font-regular, $primary-soft);
+}
+
+.balance-value {
+  @include abs($left: 44px, $top: 158px);
+  @include type(30px, $font-semibold, $white);
+}
+
+.balance-hint {
+  @include abs($left: 44px, $top: 205px);
+  @include type(12px, $font-regular, $primary-soft);
+}
+
+.section-title--acciones {
+  top: 282px;
+}
+
+.quick-card--gasto {
+  left: 24px;
+}
+
+.quick-card--ingresos {
+  left: 143px;
+}
+
+.quick-card--transferir {
+  left: 262px;
+}
+
+.section-title--ahorros {
+  top: 430px;
+}
+
+.savings-title {
+  @include abs($left: 42px, $top: 482px);
+  @include type(13px, $font-semibold, $text);
+}
+
+.savings-meta {
+  @include abs($left: 42px, $top: 510px);
+  @include type(12px, $font-regular, $muted);
+}
+
+.progress-track {
+  @include abs($left: 42px, $top: 542px, $width: 280px, $height: 8px);
+  background: $blue-100;
+  border-radius: 4px;
+}
+
+.progress-fill {
+  @include abs($left: 42px, $top: 542px, $height: 8px);
+  width: 190px;
+  background: $success;
+  border-radius: 4px;
+}
+
+.section-title--actividad {
+  top: 610px;
+}
+
+.activity {
+  @include abs($left: 42px);
+  @include type(12px, $font-regular, $text);
+  white-space: pre;
+
+  &--1 {
+    top: 648px;
+  }
+
+  &--2 {
+    top: 686px;
+  }
+
+  &--3 {
+    top: 724px;
+    font-weight: $font-semibold;
+    color: $success;
+  }
+
+  &.is-expense {
+    font-weight: $font-regular;
+    color: $text;
+  }
+
+  &.is-income {
+    font-weight: $font-semibold;
+    color: $success;
+  }
+}

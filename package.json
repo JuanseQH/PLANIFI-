@@ -1,0 +1,19 @@
+{
+  "name": "planifi",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "PLANIFI — aplicación híbrida de finanzas personales",
+  "scripts": {
+    "dev": "node scripts/run-vite.mjs",
+    "build": "node scripts/run-vite.mjs build",
+    "preview": "node scripts/run-vite.mjs preview"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8"
+  },
+  "devDependencies": {
+    "sass": "^1.90.0",
+    "vite": "^6.3.5"
+  }
+}

@@ -1,0 +1,59 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.avatar {
+  @include abs($left: 44px, $top: 183px, $width: 64px, $height: 64px);
+  background: $blue-100;
+  border-radius: 32px;
+}
+
+.profile-name {
+  @include abs($left: 128px, $top: 181px);
+  @include type(16px, $font-semibold, $text);
+}
+
+.profile-role {
+  @include abs($left: 128px, $top: 209px);
+  @include type(12px, $font-regular, $muted);
+}
+
+.profile-link {
+  @include abs($left: 128px, $top: 233px);
+  @include type(12px, $font-regular, $primary);
+  padding: 0;
+}
+
+.section-title--opciones {
+  top: 310px;
+}
+
+.account-row--1 {
+  top: 344px;
+}
+
+.account-row--2 {
+  top: 444px;
+}
+
+.account-row--3 {
+  top: 544px;
+}
+
+.account-row--4 {
+  top: 644px;
+}
+
+.account-row-title {
+  @include abs($left: 20px, $top: 21px);
+  @include type(14px, $font-semibold, $text);
+}
+
+.account-row-sub {
+  @include abs($left: 20px, $top: 48px);
+  @include type(11px, $font-regular, $muted);
+}
+
+.chevron {
+  @include abs($right: 25px, $top: 28px);
+  @include type(18px, $font-semibold, $primary);
+}

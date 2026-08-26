@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: $font-semibold;
+  line-height: 1.25;
+}
+
+.muted {
+  color: var(--muted, #{$muted});
+}
