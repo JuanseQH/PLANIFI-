@@ -59,9 +59,8 @@ Si el enlace del curso es otro, reemplázalo aquí: `[AGREGAR ENLACE DE FIGMA AQ
 
 ## Integrantes
 
-- [AGREGAR NOMBRE]
-- [AGREGAR NOMBRE]
-- [AGREGAR NOMBRE]
+- Nicolás Castrillón Cardona
+- Juan Sebastian Quintero
 
 ## Notas de uso
 
